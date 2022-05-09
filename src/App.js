@@ -10,31 +10,30 @@ import {
   News,
 } from "./components";
 
-const { Footer, Sider, Content } = Layout;
-
+const { Footer } = Layout;
 
 function App() {
-
   return (
-    <Layout className="App">
-      <Sider className="sidebar">
+    <div className="app">
+      <div className="sidebar">
         <Navbar />
-      </Sider>
-      <Layout className="main">
-        {/* <Header style={{ color: "white", textAlign: "center" }}>Header</Header> */}
-        <Content className="routes">
-          <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            {/* <Route exact path="/exchanges" element={<Exchanges />} /> */}
-            <Route exact path="/news" element={<News />} />
-            <Route
-              exact
-              path="/cryptocurrencies"
-              element={<Cryptocurrencies />}
-            />
-            <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
-          </Routes>
-        </Content>
+      </div>
+      <div className="main">
+        <Layout>
+          <div className="routes">
+            <Routes>
+              <Route exact path="/" element={<Homepage />} />
+              {/* <Route exact path="/exchanges" element={<Exchanges />} /> */}
+              <Route exact path="/news" element={<News />} />
+              <Route
+                exact
+                path="/cryptocurrencies"
+                element={<Cryptocurrencies />}
+              />
+              <Route exact path="/crypto/:coinId" element={<CryptoDetails />} />
+            </Routes>
+          </div>
+        </Layout>
         <Footer className="footer">
           <Typography.Title
             level={5}
@@ -48,8 +47,8 @@ function App() {
             <Link to="/news">News</Link>
           </Space>
         </Footer>
-      </Layout>
-    </Layout>
+      </div>
+    </div>
   );
 }
 

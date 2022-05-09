@@ -23,15 +23,14 @@ a:hover {
 }
 
 .sidebar {
-  flex: 0 0 260px !important;
-  max-width: 260px !important;
-  min-width: 260px !important;
-  width: 260px !important;
+  flex: 0.2;
   background-color: rgb(0, 21, 41);
 }
 
 .main {
-  //width: 100%;
+  flex: 0.8;
+  flex-grow: 1;
+  width: 100%;
 }
 .routes {
   padding: 24px 50px;
@@ -85,6 +84,14 @@ a:hover {
   .main {
     margin-left: 50px;
   }
+
+  .home-title {
+    font-size: 1.2rem !important;
+  }
+
+  .routes {
+    padding: 24px 60px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -99,7 +106,11 @@ a:hover {
     overflow: hidden;
   }
 
-  .navbar {
+  .routes {
+    padding: 20px;
+  }
+
+  .sidebar {
     flex: 1;
   }
 
@@ -365,7 +376,7 @@ a:hover {
 .crypto-card .crypto-image {
   width: 35px;
 }
-.select-time-period {
+.select-timeperiod {
   width: 200px !important;
   margin-top: 20px !important;
 }
@@ -376,7 +387,4 @@ a:hover {
   flex-direction: column;
   padding: 20px;
   align-items: center;
-  width: 100%;
 }
-
-
